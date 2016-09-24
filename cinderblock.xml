@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<cinder>
+<block
+	name="CoC-OpenSsl"
+	id=""
+	author="Code on Canvas"
+	summary=""
+	license=""
+	url="https://github.com/codeoncanvas/coc-openssl"
+	git="git@github.com:codeoncanvas/coc-openssl.git"
+	version=""
+	library=""
+	>
+	
+	<headerPattern>src/*.h</headerPattern>
+	<sourcePattern>src/*.cpp</sourcePattern>
+
+	<headerPattern>libs/openssl/include/openssl/*.h</headerPattern>
+
+	<includePath system="true">libs/openssl/include</includePath>
+
+	<platform os="macosx">
+		
+		<libraryPath>libs/openssl/lib/osx</libraryPath>
+
+		<staticLibrary>libs/openssl/lib/osx/libcrypto.a</staticLibrary>
+		<staticLibrary>libs/openssl/lib/osx/libssl.a</staticLibrary>
+
+	</platform>
+
+	<platform os="msw">
+		<includePath system="false">src</includePath>
+		<libraryPath>libs/openssl/lib/win</libraryPath>
+
+		<!-- todo: static libs... -->
+
+	</platform>
+
+</block>
+</cinder>
