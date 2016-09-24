@@ -25,8 +25,8 @@ void HttpsClientApp::setup()
         asio::ssl::context ctx(asio::ssl::context::sslv23);
         ctx.set_default_verify_paths();
         
-        string server = "pwc.downstreamlabs.com";
-        string path = "/api/checkin";
+        string server = "somewhere.com";
+        string path = "/api/path";
         client c(App::io_service(), ctx, server, path);
         
     }
